@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #545454; }
+
+h1,
+p {
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #d35400; }
+
+.section-header {
+  padding: 60px 0;
+  background-color: #27ae60;
+  color: #fff; }
+
+header {
+  height: 120px;
+  line-height: 120px;
+  text-align: right;
+  background-color: #545454;
+  color: #fff; }
+  header #menu {
+    width: 200px; }
+  header ul {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    background-color: #545454; }
+    header ul li {
+      height: 3em;
+      line-height: 3em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(0, 0, 0, 0.2); }
+  header a {
+    color: #fff; }
+  header button {
+    background-color: #d35400;
+    color: #fff; }
+  header .login a,
+  header .register a {
+    padding: 5px 20px; }
+  header .logo {
+    color: #d35400;
+    font-size: 36px; }
+
+/*# sourceMappingURL=style.css.map */

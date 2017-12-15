@@ -1,0 +1,88 @@
+//FONTS 
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+//COLORS 
+
+$default-gray: #545454;
+$primary-pumpkin: #d35400;
+$secondary-blue: #3498db;
+$secondary-green: #27ae60;
+$white: #fff;
+
+//RESET 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: $default-gray;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: $primary-pumpkin;
+}
+
+.section-header {
+    padding: 60px 0;
+    background-color: $secondary-green;
+    color: $white;
+}
+
+//HEADER 
+
+header 
+ {
+    height: 120px;
+    line-height: 120px;
+    text-align: right;
+    background-color: $default-gray;
+    color: $white;
+
+    #menu { width: 200px; }
+
+    ul {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        background-color: $default-gray;
+        li {
+            height: 3em;
+            line-height: 3em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    a { color: $white; }
+
+    button {
+        background-color: $primary-pumpkin;
+        color: $white;
+    }
+
+    .login,
+    .register {
+        a { padding: 5px 20px; }
+    }
+    .logo {
+        color: $primary-pumpkin;
+        font-size: 36px;
+    }
+ }

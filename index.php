@@ -5,7 +5,7 @@
     include 'inc/recent-uploads.php';
     include 'inc/top-uploaders.php';
     include 'inc/footer.php';
-?>      <script src="js/vendor/bootstrap.min.js"></script>
+?>      
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
@@ -13,8 +13,12 @@
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script> 
-            $.fn.modal || document.write('<script src="/js/vendor/bootstrap.min.js">\x3C/script>')
+            $.fn.modal || document.write('<script src="js/vendor/bootstrap.min.js">\x3C/script>')
         </script>
-
+        <script type="text/javascript" src="js/vendor/particles.min.js"></script>
+        <script type="text/javascript" src="js/vendor/particles.js"></script> 
+        <script type="text/javascript" src="js/vendor/jquery.simple-text-rotator.min.js"></script>   
+        <script type="text/javascript" src="js/script.js"></script>
+        
     </body>
 </html>

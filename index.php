@@ -5,7 +5,7 @@
     include 'inc/recent-uploads.php';
     include 'inc/top-uploaders.php';
     include 'inc/footer.php';
-?>      
+?>      </div>
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>

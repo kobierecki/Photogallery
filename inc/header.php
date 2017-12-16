@@ -20,36 +20,36 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <div class="row">
-                    <a href="#" class="logo pull-left">Photo<span>Gallery</span></a>
-                    <nav class="pull-right">
-                        <button type="button" class="btn" data-toggle="collapse" data-target="#menu">
-                            <i class="fa fa-navicon"></i>
-                        </button>
-                        <div id="menu" class="collapse">
-                            <ul>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Gallery</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
-                                <?php
-                                    if($session == null) {
+            <div id="mySidenav" class="sidenav">
+                    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">Home</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                <?php
+                if($session == null) {
                                     
-                                ?>
-                                    <li class="login"><a href="">Login</a></li>
-                                    <li class="register"><a href="">Register</a></li>
-                                <?php
-                                    } else {
+                ?>
+                <a class="login" href="#">Login</a>
+                <a class="register" href="#">Register</a>
+                <?php
+                } else {
 
-                                ?>
-                                    <li class="logout"><a href="">Logout</a></li>
-                                <?php
-                                    }
-                                ?>  
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+                ?>
+                <a  class="logout" href="#">Logout</a>
+                <?php
+                }
+                ?>  
             </div>
+            <div id=main>
+                <div class="container">
+                    <div class="row">
+                        <a href="#" class="logo pull-left">Photo<span>Gallery</span></a>
+                        <nav class="pull-right">
+                            <button type="button" class="btn" onclick="openNav()">
+                                <i class="fa fa-navicon"></i>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
         </header>

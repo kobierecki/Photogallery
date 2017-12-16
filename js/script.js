@@ -19,3 +19,14 @@ $(document).ready(function(){
         }
     });
 });
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("main").style.marginRight = "200px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.7)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight= "0";
+}

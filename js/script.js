@@ -1,11 +1,11 @@
 particlesJS();
 
 $(document).ready(function(){
-    console.log('DOM loaded');
+    console.log('DOM loaded'); 
     $(".rotate").textrotator({
-        animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000 // How many milliseconds until the next word show.
+        animation: "dissolve", 
+        separator: ",", 
+        speed: 2000 
     });
 
     $(window).scroll(function(){
@@ -20,13 +20,28 @@ $(document).ready(function(){
     });
 });
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("main").style.marginRight = "200px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.7)";
+//SIDENAV SCRIPT 
+var clicks = 0;
+var icon = document.getElementById("js-nav-icon");
+function clickCounter() {
+    clicks += 1;
+    console.log(clicks);
+    if (clicks == 1)   {
+        document.getElementById("js-mySidenav").style.width = "200px";
+        document.getElementById("js-main").style.marginRight = "200px";
+        icon.classList.remove("fa-navicon");
+        icon.classList.add("fa-times");
+        document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+    } else {
+        document.getElementById("js-mySidenav").style.width = "0";
+        document.getElementById("js-main").style.marginRight= "0";
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-navicon");
+        document.body.style.backgroundColor = "rgba(255,255,255,0)";
+        clicks = 0;
+    }
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight= "0";
-}
+
+
+

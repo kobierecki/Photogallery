@@ -41,15 +41,27 @@ a:active {
 
 .section-header {
     padding: 60px 0;
-    color: $white;
+    text-align: center;
+    color: $default-gray;
+}
+
+//REUSABLE COMPONENTS
+
+.underline {
+    height: 2px;
+    width: 20%;
+    background-color: $primary-pumpkin;
+    margin: 20px auto;
+    @media (max-width: 760px) {
+        margin: 10px auto;
+    } 
 }
 
 //BUTTONS
 
 //NAV BUTTON 
-
-.btn,
-.btn:focus {
+.hamburger,
+.hamburger:focus {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid $white;
     color: $white;
@@ -87,16 +99,65 @@ a:active {
         }
      }
 }
-//SCROLLED NAV
-.scrolled-nav {
-    background-color: rgba(149, 165, 166, 0.4);
+
+.btn-submit {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: $primary-pumpkin;
+    color: $white;
+    transition: transform 0.4s;
+    &:hover {
+        transform: scale(1.1);
+        background-color: $primary-pumpkin-hover;
+    }
 }
 
-//HEADER 
+//SIDENAV
+
+.sidenav {
+    padding-top: 60px;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    transition: 0.5s;
+
+    a {  
+        display: block;
+        margin-right: 15px;
+        text-align: right;
+        line-height: 50px;
+        font-size: 25px;
+        color: $default-gray;
+        transition: 0.3s;
+        &:hover { color: $primary-pumpkin-hover; }
+    }    
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+//HEADER
+
+#main {
+    transition: margin-right .5s;
+}
 
 header 
  {
-     width: 100%;
+    width: 100%;
     position: fixed;
     z-index: 2;
     height: 120px;
@@ -104,34 +165,11 @@ header
     text-align: right;
     color: $white;
 
-    #menu { width: 200px; }
-
-    ul {
-        width: 100%;
-        padding: 0 20px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.1);
-        li {
-            height: 3em;
-            line-height: 3em;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 1px solid rgba(230, 126, 34, 0.5);
-            &:last-child{
-                border-bottom: 1px solid rgba(230, 126, 34, 0.5);}
-        }
-    }
-
-    a { color: $white; }
-
     button {
         background-color: $primary-pumpkin;
         color: $white;
     }
 
-    .login,
-    .register {
-        a { padding: 5px 20px; }
-    }
     .logo {
         color: $primary-pumpkin;
         font-size: 36px;
@@ -180,54 +218,31 @@ header
      display: block;
  }
 
- //TEST
+ // REGISTER
+
+ form {
+     width: 50%;
+     margin: 40px auto;
+
+     input {
+         height: 40px;
+     }
+
+     textarea {
+         padding-top: 10px;
+     }
+     
+     input,
+     textarea {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        padding-left: 20px;
+     }
+ }
 
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    text-align: right;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    height: 40px;
-}
-
-.sidenav a:hover {
-    color: $primary-pumpkin-hover;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    font-size: 36px;
-    margin-right: 50px;
-}
-
-#main {
-    transition: margin-right .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
+ 
 
  

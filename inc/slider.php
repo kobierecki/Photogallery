@@ -1,4 +1,4 @@
-<section class="slider">
+<section id="main"  class="slider">
     <div id="particles-js"></div>
     <div class="slider-content">
         <h1>Welcome to <span>PhotoGallery</span></h1>
